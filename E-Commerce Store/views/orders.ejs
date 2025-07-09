@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html><head><title>Orders</title></head><body>
+<h2>My Orders</h2>
+<a href="/home">← Back</a>
+<ul>
+<% orders.forEach(order => { %>
+  <li>
+    Order by <%= order.user %>:
+    <ul>
+    <% order.items.forEach(item => { %>
+      <li><%= item.name %> - ₹<%= item.price %></li>
+    <% }) %>
+    </ul>
+  </li>
+<% }) %>
+</ul>
+</body></html>

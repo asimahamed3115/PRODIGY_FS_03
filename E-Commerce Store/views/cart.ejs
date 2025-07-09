@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html><head><title>Cart</title></head><body>
+<h2>My Cart</h2>
+<a href="/home">← Back</a>
+<ul>
+<% cart.forEach(item => { %>
+  <li><%= item.name %> - ₹<%= item.price %></li>
+<% }) %>
+</ul>
+<form method="POST" action="/cart/place">
+  <button type="submit">Place Order</button>
+</form>
+</body></html>
